@@ -105,11 +105,6 @@ literacy to question them. A taste of it, one breath per concept:
 | **RMSE − MAE** | The gap is a diagnosis: ours (41.2 − 28.8 ≈ 12.5 mg/L) says a few predictions miss badly — no surprise in a series that peaks at 376 mg/L. |
 | **Semivariogram** | The heart of kriging: how the similarity between two wells decays as the distance between them grows — nugget (noise at zero distance), sill (the plateau), range (where correlation dies). |
 
-The guide even settles a translation debate — why Portuguese scientific
-literature says *Kriging Ordinário* and not *Kriging Comum* ("ordinary"
-here is the mathematician's *without extra terms*, not the layman's
-*unremarkable*) — because method literacy includes getting the words
-right.
 
 ## Repository contents
 
