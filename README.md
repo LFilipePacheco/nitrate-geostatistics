@@ -7,6 +7,8 @@
 > testing an external drift built from deep-learning-detected greenhouses.
 
 ---
+![Geostatistical workflow](docs/geostat_workflow.png)
+*From points to surfaces: sparse well measurements (A), the semivariogram that models how similarity decays with distance (B), and the interpolated surface with the 50 mg/L regulatory contour (C). Synthetic data, for illustration.*
 
 ## Why interpolate
 
@@ -90,10 +92,24 @@ Three findings worth stating plainly:
 
 Geostatistics enters institutions through people, not scripts. Alongside
 the analysis, a **plain-language concepts guide** was written for
-non-specialist colleagues — IDW vs kriging, what a semivariogram measures,
-nugget/sill/range, why RMSE ≥ MAE always, and how to read a leave-one-out
-validation — so the maps circulate together with the literacy to question
-them.
+non-specialist colleagues, so the maps circulate together with the
+literacy to question them. A taste of it, one breath per concept:
+
+| Concept | In one breath |
+|---|---|
+| **IDW vs kriging** | IDW weighs neighbours by pure geometry (1/d²) and asks no questions about the data; kriging *learns* the optimal weights from the variogram — and pays back with an uncertainty map that IDW cannot give. |
+| **A grid node** | The map is a promise kept 40,185 times: a 100 m × 100 m lattice (141 × 285 nodes) where each cell gets its own estimate from the surrounding wells. |
+| **Leave-one-out validation** | Hide each well in turn, predict it from all the others, score the miss — 400+ honest rehearsals of the only question that matters: *how wrong are we at places we didn't measure?* |
+| **MAE** | "On average, we miss by 29 mg/L" — every error counts the same. |
+| **RMSE** | The typical error *weighted by the big misses* — one 40 mg/L error hurts four times more than two of 20. Always ≥ MAE. |
+| **RMSE − MAE** | The gap is a diagnosis: ours (41.2 − 28.8 ≈ 12.5 mg/L) says a few predictions miss badly — no surprise in a series that peaks at 376 mg/L. |
+| **Semivariogram** | The heart of kriging: how the similarity between two wells decays as the distance between them grows — nugget (noise at zero distance), sill (the plateau), range (where correlation dies). |
+
+The guide even settles a translation debate — why Portuguese scientific
+literature says *Kriging Ordinário* and not *Kriging Comum* ("ordinary"
+here is the mathematician's *without extra terms*, not the layman's
+*unremarkable*) — because method literacy includes getting the words
+right.
 
 ## Repository contents
 
@@ -127,7 +143,7 @@ data. The code is shared as a working reference implementation.
 
 ---
 
-**Luís Filipe Pacheco** — Senior Agricultural Engineer & Data Scientist,
+**Luís Filipe Pacheco** — Senior Engineer & Data Scientist,
 CCDR-Norte, I.P. · [GitHub profile](https://github.com/LFilipePacheco) ·
 [LinkedIn](https://www.linkedin.com/in/lu%C3%ADs-filipe-pacheco-471495b/) ·
 [ORCID](https://orcid.org/0009-0001-7676-6542)
