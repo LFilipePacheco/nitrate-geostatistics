@@ -115,7 +115,7 @@ matplotlib · GeoTIFF (EPSG:3763)
 
 The monitoring points and all derived surfaces are institutional data of
 CCDR-Norte, I.P. and are not published here. Figures above are aggregate
-validation statistics from the 2021-2025 analysis. The diagram uses synthetic
+validation statistics from the 2026 analysis. The diagram uses synthetic
 data. The code is shared as a working reference implementation.
 
 **Related projects:**
@@ -127,7 +127,7 @@ data. The code is shared as a working reference implementation.
 
 ---
 
-**Luís Filipe Pacheco** — Senior Engineer & Data Scientist,
+**Luís Filipe Pacheco** — Senior Agricultural Engineer & Data Scientist,
 CCDR-Norte, I.P. · [GitHub profile](https://github.com/LFilipePacheco) ·
 [LinkedIn](https://www.linkedin.com/in/lu%C3%ADs-filipe-pacheco-471495b/) ·
 [ORCID](https://orcid.org/0009-0001-7676-6542)
