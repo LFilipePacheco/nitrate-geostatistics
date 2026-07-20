@@ -115,7 +115,7 @@ matplotlib · GeoTIFF (EPSG:3763)
 
 The monitoring points and all derived surfaces are institutional data of
 CCDR-Norte, I.P. and are not published here. Figures above are aggregate
-validation statistics from the 2026 analysis. The diagram uses synthetic
+validation statistics from the 2021-2025 analysis. The diagram uses synthetic
 data. The code is shared as a working reference implementation.
 
 **Related projects:**
